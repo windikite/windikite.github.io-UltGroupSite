@@ -1,137 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 body{
-    font-family:'roboto condensed', sans-serif;
+    background:rgba(0, 0, 0, 0.9);
     margin:0;
-    background:#eee;
-    height:auto;
+    color:#fff;
+    font-family:'tahoma';
 }
 
-h1{
-    font-weight:400;
-    font-size:2.5rem;
-    text-transform: uppercase;
-    margin:0;
 
+.party-hat{
+    border-radius:30%;
+    background-color: darkgray;
 }
 
-h2{
-    font-weight:400;
-    font-size:1.2rem;
-    text-transform:capitalize;
-    margin:0;
-
-}
-
-img{
-    display:block;
+.showcase::after{
+    content:'';
+    height:100vh;
     width:100%;
-}
-
-main{
-    max-width:900px;
-    margin:auto;
-    box-shadow:30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
-}
-
-#landing{
-    background:#fff;
-
-}
-
-#landing-text{
-    display:flex;
-    flex:0 1 40vw;
-    height:50vh;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding-right:1rem;
-    padding-left:1rem;
-}
-
-#landing-text h2{
-    color:#888;
-}
-
-#landing-image{
-    background: url(/img/background.jpg);
-    background-position:center;
+    background-image:url(/img/showcase.png);
     background-size:cover;
     background-repeat:no-repeat;
-    height:50vh;
-    flex:0 1 60vw;
-    margin:0;
+    background-position:center;
+    display:block;
+    filter:blur(10px);
+    transition:all 1000ms;
+}
+
+.showcase:hover::after{
+    filter:blur(0px);
+}
+
+.showcase:hover .content{
+    filter:blur(200px);
+}
+
+.content{
+    position:absolute;
+    z-index:1;
+    top:10%;
+    left:50%;
+    margin-top:105px;
+    margin-left:-160px;
+    text-align:center;
+    transition:all 1000ms;
+}
+
+.content .logo{
+    width:300px;
 }
 
 
+.content .title{
+    font-size:2.2rem;
+    margin-top:1rem;
+}
 
-.btn{
-    padding:0.5rem 2rem;
-    border:1px #ccc solid;
-    display:inline-block;
-    margin:2rem 0 0;
-    border-radius:50px;
-    text-decoration:none;
+.content .text{
+    line-height:1.7;
+    margin-top:1rem;
+}
+
+.container{
+    max-width:960;
+    margin:auto;
+    overflow:hidden;
+    padding:4rem 1rem;
+
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:20px;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-gap:20px;
+}
+
+.center .logo{
+    width:100px;
+}
+
+.center{
+    text-align:center;
+    margin:auto;
+}
+
+.bg-light{
+    background:#f4f4f4;
     color:#333;
-    transition:background 500ms ease;
 }
 
-.btn:hover{
-    background:#9e9e9e;
-}
-
-#header{
-    padding:1.5rem;
-    text-align:center;
+.bg-dark{
     background:#333;
-    color:#fff;
+    color:#f4f4f4;
 }
 
-#header h2{
-    border-left:dotted 1px #fff;
-    border-right:dotted 1px #fff;
-    display:inline-block;
-    padding-right:1rem;
-    padding-left:1rem;
-}
-
-.caption{
-    padding:0.8rem;
-    text-align:center;
+footer p{
+    margin:0;
 }
 
 footer{
-    text-align:center;
-    padding:2rem 1rem;
-    margin:auto;
-    color:333;
+    padding:2.2rem;
 }
 
-footer h3{
-    font-size:3rem;
-    margin-bottom:0;
+/*small screens*/
+@media(max-width:560px){
+    .showcase::after{
+        height:50vh;
+    }
+
+    .content{
+        top:5%;
+        margin-top:5px;
+    }
+
+    .content .logo{
+        width: 140px;
+    }
+
+    .content .text{
+        display:none;
+    }
+
+    .grid-3, .grid-2{
+        grid-template-columns:2fr;
+    }
+
+    .services div{
+        border-bottom:#333 dashed 1px;
+        padding:1.2rem 1rem;
+    }
 }
 
-/*Screen Sized 600px and Up*/
-@media(min-width:600px) {
-    #landing{
-        display:flex;
-        height:100%;
+/*landscape*/
+@media(max-height:500px){
+    .content .title, .content .text{
+        display:none;
     }
 
-    #landing-text{
-        height:100vh;
-    }
-
-    #landing-image{
-        height:100vh;
-    }
-}
-
-/*Screen Sizes 700px and Up*/
-@media(min-width:700px){
-    .btn{
-        padding:1rem 3rem;
+    .content{
+        top:0;
     }
 }
