@@ -45,6 +45,12 @@ section#raiders{
   padding:10rem 0;
 }
 
+.twitch-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .gift-cards{
   display:grid;
   grid-gap:20px;
