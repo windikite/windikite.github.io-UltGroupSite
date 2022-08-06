@@ -1,9 +1,40 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+//Responsive Nav
 
-signUpButton.addEventListener('click', () => 
-container.classList.add('right-panel-active'));
+$(function() {
+	menu = $('nav ul');
 
-signInButton.addEventListener('click', () => 
-container.classList.remove('right-panel-active'));
+  $('#openup').on('click', function(e) {
+    e.preventDefault(); menu.slideToggle();
+  });
+  
+  $(window).resize(function(){
+    var w = $(this).width(); if(w > 480 && menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
+  });
+  
+  $('nav li').on('click', function(e) {                
+    var w = $(window).width(); if(w < 480 ) {
+      menu.slideToggle(); 
+    }
+  });
+  $('.open-menu').height($(window).height());
+});
+
+// Smooth Scrolling
+$('.cf a').on('click', function(event){
+    if (this.hash != ''){
+        event.preventDefault();
+
+        const hash = this.hash;
+        $('html, body').animate(
+            {
+                scrollTop: $(hash).offset().top
+            },
+            800,
+            function() {
+                window.location.hash = hash;
+            }
+        );
+    }
+});

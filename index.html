@@ -4,56 +4,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Sign-on Screen</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Thank god it's over</title>
 </head>
 <body>
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name"/>
-                <input type="email" placeholder="Email"/>
-                <input type="password" placeholder="Password"/>
-                <button>Sign Up</button>
-            </form>
+    <!--showcase and nav-->
+    <div id="showcase">
+        <header>
+            <nav class='cf'>
+                <ul class='cf'>
+                    <li class="hide-on-small">
+                        <a href='#showcase'>iGrief</a>
+                    </li>
+                    <li>
+                        <a href='#showcase'>Clear Vods</a>
+                    </li>
+                    <li>
+                        <a href='#clips'>Twitch Clips</a>
+                    </li>
+                    <li>
+                        <a href='#raiders'>Raiders</a>
+                    </li>
+                    <li>
+                        <a href='#gift-cards'>Screenshots</a>
+                    </li>
+                </ul>
+                <a href='#' id='openup'>myTunes</a>
+              </nav>
+        </header>
+        <div class="section-main container">
+            <h1>myTunes.</h1>
+            <h2>Your music, movies, and TV shows take center stage.</h2>
+            <p class="lead hide-on-small">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore consequuntur autem, nulla sit officiis repellat minima omnis aliquam est aperiam.
+            </p>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign In</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email"/>
-                <input type="password" placeholder="Password"/>
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
+    </div>
+
+    <!--clips section-->
+    <section id="vods" class="section">
+        <div class="container">
+            <h2 class="section-head">
+                <!--clips icon-->
+            </h2>
+            <h3>Our clear vods from multuple perspectives.</h3>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dicta numquam soluta eius, accusamus rem hic at ducimus, quod porro tempora saepe a molestiae dolorem facilis! Voluptatum eum excepturi et voluptas sunt illum illo nostrum quos, maiores, molestias ex aliquid.</p>
+            <a href="#" class="btn btn-primary mb">Start Your Trial Now</a>
+            <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, qui?</p>
+            <!--image mockup 1-->
+            <iframe
+                src="https://player.twitch.tv/?channel=windikite&parent=windikite.github.io"
+                height="720"
+                width="1280"
+                allowfullscreen>
+            </iframe>
+            <iframe
+                src="https://player.twitch.tv/?video=1548684689&parent=windikite.github.io&autoplay=false"
+                height="720"
+                width="1280"
+                allowfullscreen>
+            </iframe>
         </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+    </section>
+
+    <!--video section-->
+    <section id="clips" class="section bg-light">
+        <div class="container">
+            <h3>A collection of our most memorable clips.</h3>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, iste quos minima modi totam officia, illum, neque laborum vel reprehenderit rerum debitis illo consequatur aut. Maxime sequi corrupti soluta nam.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+            <!--image mockup 2-->
+        </div>
+    </section>
+
+    <!--raiders section-->
+    <section id="raiders" class="section">
+        <div class="container">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos velit doloremque minima facilis quis provident!</h3>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis obcaecati alias dignissimos voluptatum voluptatibus reprehenderit asperiores. Tempore illo maxime, atque natus suscipit reiciendis fuga distinctio quia unde assumenda? Facere!</p>
+        </div>
+    </section>
+
+
+    <!--gift card section-->
+    <section id="gift-cards" class="section bg-light">
+        <div class="container">
+            <div class="gift-cards">
+                <div>
+                    <img src="img/cards.png" alt="">
                 </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                <div>
+                    <h2>Gift Cards</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ullam delectus, eveniet possimus exercitationem beatae ab soluta perferendis iure id dicta aliquam suscipit amet ipsum non distinctio officia officiis accusantium. Dolor voluptas earum numquam reprehenderit culpa atque quia porro incidunt.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas eligendi, tempora aliquam animi quia!</p>
+                    <hr>
+                    <a href="#" class="text-secondary">
+                        <img src="../img/twitter.png" alt=""> Redeem
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="/js/main.js"></script>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <ul>
+                    <li>Shop & Learn</li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Shows</a></li>
+                    <li><a href="#">Apps</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+
+                <ul>
+                    <li>Orange Store</li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Today at Orange</a></li>
+                    <li><a href="#">Orange Camp</a></li>
+                    <li><a href="#">Financing</a></li>
+                    <li><a href="#">Order Status</a></li>
+                </ul>
+
+                <ul>
+                    <li>Education & Business</li>
+                    <li><a href="#">Orange & Education</a></li>
+                    <li><a href="#">Shop For College</a></li>
+                    <li><a href="#">Orange & Business</a></li>
+                    <li><a href="#">Shop For Business</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+
+                <ul>
+                    <li>About Orange</li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Orange Leadership</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact Orange</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            Copyright &copy; 2022 Orange myTunes
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
