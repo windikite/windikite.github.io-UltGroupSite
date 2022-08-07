@@ -329,6 +329,16 @@ nav a#openup {
   footer .footer-cols{
     display:none;
   }
+
+  section#screenshots .screenshot-container{
+    grid-template-columns: 1fr;
+    max-width:50px;
+  }
+
+  .twitch-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-height:580px){
